@@ -1,0 +1,85 @@
+.navBar
+{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin:0 30px 0;
+
+}
+.navBar h1
+{
+  font-size: 17px;
+}
+.navBar button 
+{
+  font-size: 16px;
+}
+
+.campaigns
+{
+  height:90%;
+
+}
+.campaigns h2
+{
+  display:flex;
+  justify-content: left;
+  margin:40px 120px 0px;
+  font-size: 30px;
+}
+
+.containerBox{
+ display:grid;
+ grid-template-columns: 1fr 1fr;
+ grid-row-gap:5vh;
+ grid-column-gap:0vh;
+}
+
+.box{
+  box-shadow:2px 2px  #a6a6a6 ;
+  margin-top: 5vh;
+  margin-left:25px;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius:8px;
+  background:white;
+  height: 40vh;
+  width:45vw;
+}
+
+.campaigns .containerBox .box div
+{
+  margin:5px 15px 20px;
+  align-items: center;
+}
+
+
+.campaigns .containerBox .box p
+{
+  margin-top: 20px;
+  align-items: center;
+}
+
+.deleteIcon
+{
+  position: relative;
+  left: 42vw;
+  top:3vh;
+  justify-content: flex-end;
+  transition: opacity 0.3s;
+}
+
+.deleteIcon:hover
+{
+  filter:opacity(0.5);
+}
+
+.logoutIcon:hover{
+ border-radius: 4px;
+ width:5vh;
+ border:solid 1px #dcdce6;
+ background:transparent;
+ padding:2px;
+ box-sizing: content-box;
+}

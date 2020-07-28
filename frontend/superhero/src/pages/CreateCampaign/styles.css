@@ -1,0 +1,65 @@
+.createContainer {
+    display: flex;
+    justify-content: space-around;
+    border: solid 1px red;
+}
+
+.border{
+    border: solid 1px red;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: space-around;
+    border: solid 1px red;
+}
+
+.labelContainer p,
+h2 {
+    margin: 30px 5px 0px;
+    border: solid 1px red;
+}
+
+.labelContainer img {
+    position: relative;
+    align-self: flex-start;
+    bottom: 20px;
+    border: solid 1px red;
+}
+
+.createForm {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 600px;
+    padding: 2px 5px 2px;
+    border: solid 1px red;
+}
+
+.createForm textarea {
+    margin-top: 4px;
+    width: 100%;
+    max-width: 588px;
+    min-width: 588px;
+    min-height: 150px;
+    max-height: 300px;
+    border: solid 1px red;
+}
+
+.createForm input {
+    margin-bottom: 20px;
+    max-width: 590px;
+    border: solid 1px red;
+}
+
+.createForm button {
+    margin-top: 8vh;
+    border: solid 1px red;
+}
+
+.labelContainer p {
+    margin: 50px 10px 130px;
+    font-size: medium;
+    border: solid 1px red;
+}
