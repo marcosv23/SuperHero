@@ -53,66 +53,71 @@ const history = useHistory();
   }
 
 return(
- <div className="Container">
-   <div className="content">
-      <section >
-          <img src={Logo}></img>
-                      <h2>Register!</h2>
-                      <p >
-                        Vestibulum dolor risus, faucibus et ipsum suscipit, 
-                        rutrum maximus leo. 
-                      </p>
-                      <Link className="link" to="/">
-                          <FaLongArrowAltLeft/> 
-                          Go Back
-                      </Link>
-              
-        </section>
-        <form onSubmit={handleRegister} className="formContainer">
-              <input 
-               value={name}
-               placeholder="Name"
-               onChange={e=> setName(e.target.value)}/>
+    <div className="container">
+      <div className="d-flex column d-none ">
+        <div className=" row  ">
+          <section className="col-7 p-4">
+              <img  src={Logo}></img>
+                          <h2>Register!</h2>
+                            <br/><br/>
+                          <p className="d-none d-md-block">
+                            Vestibulum dolor risus, faucibus et ipsum suscipit
+                          </p>
+                          <br/><br/>
+                          <Link className="link d-none d-md-block" to="/">
+                              <FaLongArrowAltLeft/> 
+                              Go Back
+                          </Link>
+                  
+            </section>
+          </div>
 
-              <input  
-              value={email}
-              type="email"
-              placeholder="Email"
-              onChange={e=> setEmail(e.target.value)}/>
-
+          <div className=" row justify-content-center pr-3 ">
+             <form  onSubmit={handleRegister} className="row  mt-5 ml-5 ">
                 <input 
-                value={password}
-                placeholder="Password"
-                onChange={e=> setPassword(e.target.value)}
-                />
+                value={name}
+                placeholder="Name"
+                onChange={e=> setName(e.target.value)}/>
 
-              <input 
-              value={whatsapp}
-              type="text"
-              placeholder="WhatsApp"
-              onChange={e=> setWhatsapp(e.target.value)}/>
-              
-              
-                <div className="input-group" >
-                  <input 
-                  value={city}   
-                  placeholder="City" 
-                  onChange={e=>setCity(e.target.value)}/>
+                <input  
+                value={email}
+                type="email"
+                placeholder="Email"
+                onChange={e=> setEmail(e.target.value)}/>
 
                   <input 
-                  value={uf}
-                  placeholder="UF"
-                  style={{width:90 }}
-                  onChange={e=> setUf(e.target.value)}
-                 />
+                  value={password}
+                  placeholder="Password"
+                  onChange={e=> setPassword(e.target.value)}
+                    />
 
-                </div>
+                  <input 
+                  value={whatsapp}
+                  type="text"
+                  placeholder="WhatsApp"
+                  onChange={e=> setWhatsapp(e.target.value)}/>
+                  
+                  
+                    <div className="input-group" >
+                      <input 
+                      value={city}   
+                      placeholder="City" 
+                      onChange={e=>setCity(e.target.value)}/>
 
-              <button  type ="submit" className="button" > Register!</button>
-          </form>
+                      <input 
+                      value={uf}
+                      placeholder="UF"
+                      style={{width:80 }}
+                      onChange={e=> setUf(e.target.value)}
+                    />
 
-    </div>
- </div>
+                    </div>
+
+                  <button  type ="submit" className=" button" > Register!</button>
+              </form>
+          </div>
+        </div>
+        </div>
 
 
 )

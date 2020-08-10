@@ -42,35 +42,39 @@ export default function Logon() {
 
 
         { /*<section className="form">*/}
+        <div className="container">
+                <div className="form  justify-content-center" >
+                        <img src={logo} className="" 
+                            z alt="SuperHero" />
+                        <form className=" borda m-5" onSubmit={handleLogin}
+                            className="frm_logon" >
+                            < h2 > Sign in </h2>
+                            <input type="text"
+                                value={email}
+                                onChange={event => setEmail(event.target.value)}
+                                placeholder="Email" />
 
-        <Container className="form" >
-            <Row style={{ borderWidth: 1 }}>
-                <Col>
-                <img src={logo}
-                    z alt="SuperHero" />
-                <form onSubmit={handleLogin}
-                    className="frm_logon" >
-                    < h2 > Sign in </h2>
-                    <input type="text"
-                        value={email}
-                        onChange={event => setEmail(event.target.value)}
-                        placeholder="Email" />
-
-                    < input type="text"
-                        value={password}
-                        onChange={event => setPassword(event.target.value)}
-                        placeholder="Password" />
-
-                    <button className="button"
-                        type="submit" > Login </button>
-                    <Link className="link"
-                        to="/register" > < FiLogIn color="#cc0000" /> Não tem cadastro ? </Link>
-                </form>
-            </Col>
-        </Container>
+                            < input type="text"
+                                className=""
+                                value={password}
+                                onChange={event => setPassword(event.target.value)}
+                                placeholder="Password" />
+                            <div className="mr-5">
+                                <button className="button "
+                                    type="submit" > Login
+                                </button>
+                                <Link className=" link"
+                                     style={{marginLeft:10}}
+                                    to="/register" > < FiLogIn color="#cc0000" /> 
+                                    Não tem cadastro ? 
+                                </Link>
+                            </div>
+                        </form>
+            </div>
+        </div>
 
 
-        <img src={mainImg}
+        <img className="d-none d-md-block" src={mainImg}
             alt="Save the Day" />
     </div>
     );

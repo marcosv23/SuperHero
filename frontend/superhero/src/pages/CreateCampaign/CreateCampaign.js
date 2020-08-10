@@ -30,18 +30,19 @@ export default function CreateCampaign() {
     }
 
     return ( <
-        div className = "createContainer" >
+        div className = "createContainer row m-3" >
         <
         section className = "labelContainer" >
         <
-        img src = { logo }
+        img className="d-none d-md-block" src = { logo }
         /> <
-        h2 > Create a new Campaign < /h2> <
-        p > Describe tou new campaign,
+        h2 > Create a new Campaign < /h2> 
+    
+        <p className="d-none d-md-block "> Describe tou new campaign,
         we 'll  find a SuperHero to 
         settle this up!
+        </p> 
         <
-        /p> <
         Link to = "/"
         className = "link" > < FaArrowLeft size = { 15 } > < /FaArrowLeft> Go back to Home</Link >
         <

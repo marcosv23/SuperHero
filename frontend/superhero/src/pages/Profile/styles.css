@@ -23,29 +23,28 @@
 }
 .campaigns h2
 {
-  display:flex;
+
   justify-content: left;
   margin:40px 120px 0px;
   font-size: 30px;
 }
-
-.containerBox{
- display:grid;
- grid-template-columns: 1fr 1fr;
- grid-row-gap:5vh;
- grid-column-gap:0vh;
+.border{
+  border:solid 1px blue;
 }
 
+
+
 .box{
+  display:flex;
   box-shadow:2px 2px  #a6a6a6 ;
-  margin-top: 5vh;
-  margin-left:25px;
   align-items: center;
   justify-content: flex-start;
   border-radius:8px;
   background:white;
-  height: 40vh;
-  width:45vw;
+  margin:2vh 2vw 5vh;
+  height: 100%;
+  width: 100%;
+  
 }
 
 .campaigns .containerBox .box div
@@ -63,10 +62,7 @@
 
 .deleteIcon
 {
-  position: relative;
-  left: 42vw;
-  top:3vh;
-  justify-content: flex-end;
+  
   transition: opacity 0.3s;
 }
 
@@ -75,11 +71,17 @@
   filter:opacity(0.5);
 }
 
-.logoutIcon:hover{
+.logoutIcon{
  border-radius: 4px;
  width:5vh;
  border:solid 1px #dcdce6;
  background:transparent;
- padding:2px;
- box-sizing: content-box;
+ margin-right: 30px;
+ margin-top:5px;
+
+}
+
+.redTitle{
+  color:  rgb(179, 0, 0);
+  
 }

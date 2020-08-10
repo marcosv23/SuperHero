@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api'
 import Logo from '../../assets/logo.svg';
-import { FaPowerOff, FaTrashAlt } from 'react-icons/fa';
+import { FaPowerOff, FaTrashAlt, FaHandsHelping, FaCopy, FaMoneyCheckAlt, FaPlus} from 'react-icons/fa';
 import Styles from './styles.css';
 import { useHistory, Link } from 'react-router-dom';
 
@@ -30,6 +30,10 @@ export default function Profile() {
     }
   }
 
+    function handleAddCampaign()
+    {
+      history.push('/createCampaign')
+    }
 
   const history = useHistory();
 
@@ -62,14 +66,18 @@ export default function Profile() {
   if (campaigns.length == 0) {
     return (
       <>
-        <div className="navBar">
-          <img src={Logo} width="120" />
-          <h1>{`Bem Vindo, ${userName} `}</h1>
-          <button onClick={handleCreateCampaign} type="button" class="button" style={{ width: '20%', marginLeft: 450 }}>Create a new Campaign</button>
-          <FaPowerOff onClick={handleLogout} className="logoutIcon" color="#e02041" size={25} />
+        <div className="row justify-content-between">
+
+          <img className="col-3" src={Logo} width="120" />
+          <h3 className="col-2 d-none d-lg-block d-xl-none" >{`Bem Vindo, ${userName} `}</h3>
+          <p className="mt-5"><strong> {`Bem Vindo, ${userName} `}</strong></p>
+      
+          <button className="col-1 "  className="d-none  d-md-block button" onClick={handleCreateCampaign} type="button"  >Create a new Campaign</button>
+          <FaPowerOff className="col-2 mt-2 logoutIcon" size={30} onClick={handleLogout}  color="#e02041"  />
+          <FaPlus className="col-2 mt-2" color="#cc0000" size={30} onClick={handleAddCampaign}/>
         </div>
 
-        <div style={{ marginTop: 150, marginLeft: 150 }}>
+        <div className="mt-5 ml-5 m-xl-5  mr-5 row align-items-center justify-content-center" >
           <h1>There aren't anyone campaign registered,
            <Link className="link" to="/createCampaign" style={{ fontSize:30, textDecoration: 'none', color: '#cc0000' }}>create a new Campaign!</Link>
           </h1>
@@ -79,39 +87,39 @@ export default function Profile() {
   }
   return (
 
-    <>
+    <div className="container-fluid">
 
       <div className="navBar">
         <img src={Logo} width="120" />
-        <h1>{`Bem Vindo, ${userName} `}</h1>
-        <button onClick={handleCreateCampaign} type="button" class="button" style={{ width: '20%', marginLeft: 450 }}>Create a new Campaign</button>
+        <h1 className="d-none d-md-block">{`Bem Vindo, ${userName} `}</h1>
+        <p></p>
+        <button className="d-none d-md-block button" onClick={handleCreateCampaign} type="button" style={{ width: '20%', marginLeft: 450 }}>Create a new Campaign</button>
         <FaPowerOff onClick={handleLogout} className="logoutIcon" color="#e02041" size={25} />
       </div>
 
-      <div className="campaigns">
-        <h2>Registered Campaigns </h2>
-        <div className="containerBox">
-
+      <div className="row justify-content-center"><h2 >Registered Campaigns </h2></div>
+      
+      <div className="row justify-content-center">
           {campaigns.map(item => (
-            <ul key={item.id} className="box">
-              <li>
-                <span  onClick={()=>handleDeleteCampaign(item.id)} className="deleteIcon">
+            <ul key={item.id} className="box  col-lg-4 col-md-6">
+              <li className="col-md">
+                <span className="d-flex mt-1 justify-content-end deleteIcon"  onClick={()=>handleDeleteCampaign(item.id)} >
                   <FaTrashAlt  color="#8c8c8c" size={20} />
                 </span>
 
-                <div>
-                  <h3>CAMPAIGN</h3>
-                  <p>{item.title}</p>
+                <div >
+                  <h3 className="redTitle"><FaHandsHelping size={20} />&nbsp;Campaign&nbsp;</h3>
+                  <p className="ml-3">{item.title}</p>
                 </div>
                 <div>
-                  <h3>DESCRIPTION</h3>
-                  <p>{item.description}
+                  <h3 className="redTitle"><FaCopy size={18}/>&nbsp;Description&nbsp;</h3>
+                  <p className="ml-3">{item.description}
                   </p>
                 </div>
 
                 <div>
-                  <h3>VALOR:</h3>
-                  <p>${item.value}</p>
+                  <h3 className="redTitle"><FaMoneyCheckAlt size={20}/>&nbsp;Value</h3>
+                  <p className="ml-3">${item.value}</p>
                 </div>
 
               </li>
@@ -119,8 +127,8 @@ export default function Profile() {
           ))}
 
         </div>
-      </div>
+    
 
-    </>
+    </div>
   )
 }

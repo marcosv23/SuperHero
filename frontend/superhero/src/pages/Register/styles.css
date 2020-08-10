@@ -11,35 +11,21 @@
   
  }
 
- .Container .content 
- {
-  
-   width:100%;
-   padding:96px;
-   box-shadow:  0 0 100px rgba(242, 242, 242,0.1);
-   display:flex;
-   justify-content: space-between;
-   align-items: center;
 
- }
  
  .Container  .content section 
  {
 
    width:100%;
-
-   max-width:400px;
-   height:500px
   
  }
 
  .Container .content  form
  {
- 
-  height:500px;
+  width:100%;
  }
 
- .Container  .content section h2
+ .Container  .content section 
  {
 
   margin:69px 0px 35px;
@@ -51,6 +37,7 @@
 
 .Container .content section p
 {
+  border: 1px red;
 line-height: 36px;
 font-size: 19px;
 margin:100px 0px 0px;
@@ -63,14 +50,13 @@ width: 100%;
 }
 
 
-.Container .content form .input-group
+ form .input-group
 {
  display: flex;
- width:88%;
- 
+
 }
-.Container .content form .input-group input + input
+ form .input-group input + input
 {
+
  margin-left:8px;
- flex-wrap: nowrap;
 }
