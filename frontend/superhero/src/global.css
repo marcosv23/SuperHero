@@ -11,6 +11,16 @@ li{
   list-style: none;
 }
 
+border{
+  
+}
+
+.logoutIcon .smIcon{
+  position: relative;
+  bottom:15vh;
+  border:solid 1px red;
+}
+
 body{
   font: 400 14px Roboto, Fira Code, sans-serif;
   background: #f2f2f2;

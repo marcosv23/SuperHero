@@ -89,12 +89,29 @@ export default function Profile() {
 
     <div className="container-fluid">
 
-      <div className="navBar">
-        <img src={Logo} width="120" />
-        <h1 className="d-none d-md-block">{`Bem Vindo, ${userName} `}</h1>
-        <p></p>
-        <button className="d-none d-md-block button" onClick={handleCreateCampaign} type="button" style={{ width: '20%', marginLeft: 450 }}>Create a new Campaign</button>
-        <FaPowerOff onClick={handleLogout} className="logoutIcon" color="#e02041" size={25} />
+      {/*hidden only on sm*/}
+      <div className="d-sm-none d-md-block">
+        <div className="navBar row ">
+          <img src={Logo} width="120" />
+          <h1 className="d-none d-md-block">{`Bem Vindo, ${userName} `}</h1>
+          <h3 className="pt-5 d-block d-sm-none link" onClick={handleCreateCampaign}>Create  new campaign</h3>
+          <button className="d-none d-md-block button " onClick={handleCreateCampaign} type="button" style={{ width: '20%', marginLeft: 450 }}>Add campaign</button>
+          <FaPowerOff onClick={handleLogout} className="logoutIcon " color="#e02041" size={25} />
+        </div>
+      </div>
+
+
+      {/** visible only on sm */}
+      <div className="  container-fluid border  d-none d-sm-block d-md-none">
+        <div>
+          <FaPowerOff onClick={handleLogout} className="logoutsmIcon mb-5" color="#e02041" size={25} />
+        </div>
+        <div className="navBar row border  d-sm-block d-md-none">
+          <img className="col-sm-1 border " src={Logo} width="120" />
+          <h1 className="d-none d-md-block border ">{`Bem Vindo, ${userName} `}</h1>
+          <h3 className="pt-5 d-block d-sm-none link border " onClick={handleCreateCampaign}>Create  new campaign</h3>
+          <button className="d-none d-md-block button border " onClick={handleCreateCampaign} type="button" style={{ width: '20%', marginLeft: 450 }}>Add campaign</button>
+        </div>
       </div>
 
       <div className="row justify-content-center"><h2 >Registered Campaigns </h2></div>

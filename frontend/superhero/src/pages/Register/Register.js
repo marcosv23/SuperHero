@@ -56,8 +56,9 @@ return(
     <div className="container">
       <div className="d-flex column d-none ">
         <div className=" row  ">
-          <section className="col-7 p-4">
+          <section className="d-none  d-lg-block p-4 m-2">
               <img  src={Logo}></img>
+                          
                           <h2>Register!</h2>
                             <br/><br/>
                           <p className="d-none d-md-block">
@@ -72,7 +73,10 @@ return(
             </section>
           </div>
 
-          <div className=" row justify-content-center pr-3 ">
+          <div className=" row justify-content-center pr-3 mr-2">
+             {/*Visibleonly on Sm*/} <h2 className="d-sm-none d-md-block">Register!</h2>
+            {/*Visibleonly on Md*/} <h2 className="d-none d-md-block d-lg-none">Register!</h2>
+             
              <form  onSubmit={handleRegister} className="row  mt-5 ml-5 ">
                 <input 
                 value={name}
